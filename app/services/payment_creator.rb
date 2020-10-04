@@ -11,9 +11,6 @@ class PaymentCreator
       update_payment(resp)
       {success: true, payment_url: @payment.payment_url, error: nil }
     else
-      puts "*"*99
-      data = JSON.parse(resp.body)
-      puts data.inspect
       {success: false, error: resp.code}
     end
   end
@@ -54,7 +51,7 @@ class PaymentCreator
   end
 
   def body_request
-      {"cost" => @payment.value.to_i,
+      {"cost" => @payment.value,
       "purchase_details_url" => "https://tiendadss.com/payments/#{@payment.code}",
       "idempotency_token" => @payment.code,
       "order_id" => @payment.code,

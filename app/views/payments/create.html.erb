@@ -1,2 +1,7 @@
-<p>El proceso de pago es </p>
-<p><%= @resp["status"] %> </p>
+<% if @resp[:success] %>
+<p>La generación de pago ha sido exitosa, para continuar ingresa al siguiente link: </p>
+<a class="pay_link" href=<%= @resp[:payment_url] %> target='_self'>Abrir TPaga Wallet</a>
+<% else %>
+<p> Ha ocurrido un error al generar el pago, por favor intenta nuevamente, si el problema continua,
+contacta a nuestro equipo de soporte </p>
+<% end %>

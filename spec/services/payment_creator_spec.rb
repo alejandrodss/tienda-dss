@@ -11,24 +11,24 @@ RSpec.describe PaymentCreator do
 
     let(:params) {{value: 50000, request: {ip: "127.168.0.1"}}.with_indifferent_access}
     let(:body) do
-      {"cost" => "50000.0",
+      {"cost" => "50000",
       "purchase_details_url" => "https://tiendadss.com/payments/113d19d68449759fd210f2a6448f4828a14834a6b215774a0857d8675932cace",
-      "idempotency_token" => "ea0c78c5-e85a-48c4-b7f9-24a9014a2339",
+      "idempotency_token" => "113d19d68449759fd210f2a6448f4828a14834a6b215774a0857d8675932cace",
       "order_id" => "113d19d68449759fd210f2a6448f4828a14834a6b215774a0857d8675932cace",
       "terminal_id" => "pp_18",
       "purchase_description" => "Compra en Tienda DSS",
       "user_ip_address" => "127.168.0.1",
-      "expires_at" => "2020-10-05 18:09:09 UTC"}
+      "expires_at" => "2020-10-05"}
     end
     context "The request is successful" do
       it "Create payment request" do
         expected_response = {
           "cancelled_at" => "somestring",
           "cost" => "50000",
-          "expires_at" => "2018-11-05T20:10:57.549653+00:00",
-          "idempotency_token" => "ea0c78c5-e85a-48c4-b7f9-24a9014a2339",
+          "expires_at" => "2018-11-05",
+          "idempotency_token" => "113d19d68449759fd210f2a6448f4828a14834a6b215774a0857d8675932cace",
           "merchant_user_id" => "somestring",
-          "order_id" => "2",
+          "order_id" => "113d19d68449759fd210f2a6448f4828a14834a6b215774a0857d8675932cace",
           "purchase_description" => "Compra en Tienda DSS",
           "purchase_details_url" => "https://tiendadss.com/payment/113d19d68449759fd210f2a6448f4828a14834a6b215774a0857d8675932cace",
           "purchase_items" => {},
