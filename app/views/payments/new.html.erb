@@ -1,0 +1,8 @@
+<h1>Hola, Bienvenido a la tienda DSS</h1>
+<%= form_with scope: :payment, url: payments_path, local: true do |form| %>
+  <p>Choose the amount of product that you want </p>
+  <%= form.label :quantity %><br>
+  <%= form.number_field :product_quantity %>
+
+  <%= form.submit "Pay with TPaga"%>
+<% end %>
