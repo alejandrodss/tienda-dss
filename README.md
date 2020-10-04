@@ -8,3 +8,15 @@ Tasks to do
 - Code the solution and make the test pass --> 3 hours
 - User test  --> 1 hour
 - Deploy proccess --> 1 hour
+
+Update 4-oct-2020
+Completed task with real time spended
+- Review the documentation and plan the app --> 1.5 hour
+- Setup the initial config of project --> 1 hour
+- Make unit test of the features to develop --> 2.5 hours
+- Code the solution and make the test pass --> 4 hours
+- User test  --> 15 mins
+
+Task to do
+- Add styles and make mini store beautiful --> 2
+- Deploy proccess --> 1 hour
